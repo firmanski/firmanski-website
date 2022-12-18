@@ -1,33 +1,9 @@
 import Head from "next/head";
-import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
-import { useEffect, useState } from "react";
-
-type StringArray = Array<String>;
-
-const inter = Inter({ subsets: ["latin"] });
+import Slide1 from "../components/home/Slide1";
+import Slide2 from "../components/home/Slide2";
 
 export default function Home() {
-  const [type, setType] = useState("");
-  const initialText =
-    "It all started in 2020 when I need a portfolio website for my vector graphic works. I started learning HTML, and quickly after I got into CSS, at that point I was mind blown by it's power!";
-  const initialTextArr = initialText.split("");
-
-  function loopThroughSplittedText() {
-    for (var i = 0; i < initialTextArr.length; i++) {
-      // for each iteration console.log a word
-      // and make a pause after it
-      (function (i) {
-        setTimeout(function () {
-          setType((prev) => (prev += initialTextArr[i]));
-          console.log(initialTextArr[i]);
-        }, 50 * i);
-      })(i);
-    }
-  }
-
-  useEffect(loopThroughSplittedText, []);
-
   return (
     <>
       <Head>
@@ -38,21 +14,8 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} w-screen h-screen`}>
         <div className="carousel w-full h-full">
-          <div
-            id="item1"
-            className="carousel-item w-full h-full flex justify-center items-center gap-12 "
-          >
-            <p className="max-w-xs md:max-w-md">{type}</p>
-          </div>
-          <div
-            id="item2"
-            className="carousel-item w-full h-full flex justify-center items-center gap-12 "
-          >
-            <p className="max-w-xs md:max-w-md">
-              After a few months, I’m being confident to build a static website.
-              And my first website is this
-            </p>
-          </div>
+          <Slide1 />
+          <Slide2 />
           <div
             id="item3"
             className="carousel-item w-full h-full flex justify-center items-center gap-12 "
