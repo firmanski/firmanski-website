@@ -23,7 +23,7 @@ const Slide2 = () => {
   return (
     <div
       id="item1"
-      className="carousel-item w-full h-full flex justify-center items-center gap-12 "
+      className="carousel-item w-full h-full flex justify-center items-center gap-12"
     >
       <p className="max-w-xs md:max-w-md">{type}</p>
     </div>

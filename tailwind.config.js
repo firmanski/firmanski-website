@@ -6,7 +6,12 @@ module.exports = {
     "./layout/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "riz-pink": "#F230D2",
+        "riz-black": "#0D0D0D",
+      },
+    },
   },
   plugins: [require("daisyui")],
 };
