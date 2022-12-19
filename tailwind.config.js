@@ -8,8 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "riz-pink": "#F230D2",
-        "riz-black": "#0D0D0D",
+        "riz-pink": "#FF5CC7",
+        "riz-black": "#000000",
+        "riz-purple": "#471DE3",
+        "riz-blue": "#27DBFE",
+        "riz-yellow": "#FFF112",
       },
     },
   },
