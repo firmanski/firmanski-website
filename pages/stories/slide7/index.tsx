@@ -9,7 +9,7 @@ const Slide7: NextPageWithLayout = () => {
   const [xcors, setXcors] = useState();
   const [ycors, setYcors] = useState();
   const [type, setType] = useState("");
-  const initialText = `A year later, I already know ReactJS after learn react through
+  const initialText = `I already know ReactJS after learn react through
   Academind course, I am able to develop some frontend app, and
   continue my learning path.`;
   const initialTextArr = initialText.split("");
@@ -40,9 +40,14 @@ const Slide7: NextPageWithLayout = () => {
       className="carousel-item w-screen h-screen flex justify-center items-center gap-12"
       style={{ left: xcors, top: ycors }}
     >
-      <p className="max-w-xs md:max-w-md">
-        <span className={styles.letter}>{type}</span>
-      </p>
+      <div className="w-96  h-auto overflow-hidden">
+        <h1 className="text-4xl mb-7 font-riz-h leading-loose">
+          ⌛A year later, ...
+        </h1>
+        <p className="max-w-xs md:max-w-md min-h-16  font-riz-body">
+          <span className={styles.letter}>{type}</span>
+        </p>
+      </div>
     </div>
   );
 };

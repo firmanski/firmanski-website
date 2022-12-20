@@ -38,9 +38,14 @@ const Slide10: NextPageWithLayout = () => {
       className="carousel-item w-screen h-screen flex justify-center items-center gap-12"
       style={{ left: xcors, top: ycors }}
     >
-      <p className="max-w-xs md:max-w-md">
-        <span className={styles.letter}>{type}</span>
-      </p>
+      <div className="w-96  h-auto overflow-hidden">
+        <h1 className="text-4xl mb-7 font-riz-h leading-normal">
+          💃YeayY!!...
+        </h1>
+        <p className="max-w-xs md:max-w-md min-h-16  font-riz-body">
+          <span className={styles.letter}>{type}</span>
+        </p>
+      </div>
     </div>
   );
 };

@@ -5,12 +5,13 @@ import HomeLayout from "../../../layout/StoriesLayout";
 import styles from "./Slide13.module.css";
 import MainNavigation from "../../../components/navigations/MainNavigation";
 import { useState, useEffect } from "react";
+import SocialLinks from "../../../components/navigations/SocialLinks";
 
 const Slide13: NextPageWithLayout = () => {
   const [xcors, setXcors] = useState();
   const [ycors, setYcors] = useState();
   const [type, setType] = useState("");
-  const initialText = `So, can I be a part of your amazing team?`;
+  const initialText = `Can I be a part of your amazing team?`;
   const initialTextArr = initialText.split("");
 
   function loopThroughSplittedText() {
@@ -36,15 +37,16 @@ const Slide13: NextPageWithLayout = () => {
     <div
       onMouseMove={imageClipMove}
       id="item1"
-      className="carousel-item w-screen h-screen flex justify-center items-center gap-12"
+      className="carousel-item w-screen h-screen flex flex-col justify-center items-center gap-4"
       style={{ left: xcors, top: ycors }}
     >
-      <p className="max-w-xs md:max-w-md">
-        <span className={styles.letter}>{type}</span>
-      </p>
-      <Fragment>
-        <MainNavigation />
-      </Fragment>
+      <div className="w-96 h-auto overflow-hidden">
+        <h1 className="text-4xl mb-7 font-riz-h leading-normal">🙋‍♂️So now,</h1>
+        <p className="max-w-xs md:max-w-md min-h-6 font-riz-body">
+          <span className={styles.letter}>{type}</span>
+        </p>
+      </div>
+      <SocialLinks />
     </div>
   );
 };

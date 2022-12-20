@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 const Slide2: NextPageWithLayout = () => {
   const [type, setType] = useState("");
-  const initialText = `After a few months, I’m being confident to build a static website.
+  const initialText = `Then I’m being confident to build a static website.
     And my first website is this`;
   const initialTextArr = initialText.split("");
 
@@ -28,7 +28,12 @@ const Slide2: NextPageWithLayout = () => {
       id="item1"
       className="carousel-item w-screen h-screen flex justify-center items-center gap-12"
     >
-      <p className="max-w-xs md:max-w-md">{type}</p>
+      <div className="w-96  h-auto overflow-hidden">
+        <h1 className="text-4xl mb-7 font-riz-h leading-loose">
+          📖After a few months learning,
+        </h1>
+        <p className="max-w-xs md:max-w-md">{type}</p>
+      </div>
     </div>
   );
 };

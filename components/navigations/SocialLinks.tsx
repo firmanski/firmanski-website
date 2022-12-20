@@ -18,12 +18,13 @@ const MY_SOCIALS = [
 
 const SocialLinks = () => {
   return (
-    <ul className="flex justify-center items-center rounded-full gap-9">
+    <ul className="flex justify-center items-center rounded-xl h-auto py-7">
       {MY_SOCIALS.map((social, index) => (
         <li key={index}>
           <Link
             href={social.link}
-            className="py-3 relative before:absolute before:hidden before:left-0 before:right-0 before:bottom-0 before:h-1 before:bg-riz-purple before:z-10 before:rounded-full hover:before:block"
+            target="_blank"
+            className="p-7 relative before:absolute before:hidden before:left-0 before:right-0 before:bottom-0 before:top-0 before:bg-slate-200 before:-z-10 before:rounded-xl hover:before:block"
           >
             {social.name}
           </Link>

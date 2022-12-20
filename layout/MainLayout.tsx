@@ -11,7 +11,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
         <link rel="stylesheet" href="https://use.typekit.net/gix3kzf.css" />
         <link rel="icon" href="/svg/favicon.svg" />
       </Head>
-      <main className="min-w-screen min-h-screen bg-white">{children}</main>
+      <main className="min-w-screen min-h-screen">{children}</main>
     </>
   );
 };
