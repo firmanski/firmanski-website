@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import MainNavigation from "../navigations/MainNavigation";
+import MainNavigation from "../tabs/MainNavigation";
 import logo from "../../public/rizfirsy.png";
 
 const Header = () => {

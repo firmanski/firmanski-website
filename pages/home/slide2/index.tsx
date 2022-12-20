@@ -1,7 +1,10 @@
-import React from "react";
+import { ReactElement } from "react";
+import { NextPageWithLayout } from "../../_app";
+import MainLayout from "../../../layout/MainLayout";
+import HomeLayout from "../../../layout/HomeLayout";
 import { useState, useEffect } from "react";
 
-const Slide2 = () => {
+const Slide2: NextPageWithLayout = () => {
   const [type, setType] = useState("");
   const initialText = `After a few months, I’m being confident to build a static website.
     And my first website is this`;
@@ -23,10 +26,18 @@ const Slide2 = () => {
   return (
     <div
       id="item1"
-      className="carousel-item w-full h-full flex justify-center items-center gap-12"
+      className="carousel-item w-screen h-screen flex justify-center items-center gap-12"
     >
       <p className="max-w-xs md:max-w-md">{type}</p>
     </div>
+  );
+};
+
+Slide2.getLayout = (page: ReactElement) => {
+  return (
+    <MainLayout>
+      <HomeLayout>{page}</HomeLayout>
+    </MainLayout>
   );
 };
 

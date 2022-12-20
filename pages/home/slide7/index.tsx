@@ -1,15 +1,17 @@
-import React from "react";
-import styles from "./Slide1.module.css";
+import { ReactElement } from "react";
+import { NextPageWithLayout } from "../../_app";
+import MainLayout from "../../../layout/MainLayout";
+import HomeLayout from "../../../layout/HomeLayout";
+import styles from "./Slide7.module.css";
 import { useState, useEffect } from "react";
-import Image from "next/image";
-import website from "../../public/images/website.png";
 
-const Slide1 = () => {
+const Slide7: NextPageWithLayout = () => {
   const [xcors, setXcors] = useState();
   const [ycors, setYcors] = useState();
   const [type, setType] = useState("");
-  const initialText =
-    "It all started in 2020 when I need a portfolio website for my vector graphic works. I started learning HTML, and quickly after I got into CSS, at that point I was mind blown by it's power!";
+  const initialText = `A year later, I already know ReactJS after learn react through
+  Academind course, I am able to develop some frontend app, and
+  continue my learning path.`;
   const initialTextArr = initialText.split("");
 
   function loopThroughSplittedText() {
@@ -35,16 +37,9 @@ const Slide1 = () => {
     <div
       onMouseMove={imageClipMove}
       id="item1"
-      className="carousel-item w-full h-full flex justify-center items-center gap-12"
+      className="carousel-item w-screen h-screen flex justify-center items-center gap-12"
       style={{ left: xcors, top: ycors }}
     >
-      {/* <div id="bg" className="relative">
-        <Image
-          src={website}
-          alt="website"
-          className={`${styles.imageClip} left-60`}
-        />
-      </div> */}
       <p className="max-w-xs md:max-w-md">
         <span className={styles.letter}>{type}</span>
       </p>
@@ -52,4 +47,12 @@ const Slide1 = () => {
   );
 };
 
-export default Slide1;
+Slide7.getLayout = (page: ReactElement) => {
+  return (
+    <MainLayout>
+      <HomeLayout>{page}</HomeLayout>
+    </MainLayout>
+  );
+};
+
+export default Slide7;

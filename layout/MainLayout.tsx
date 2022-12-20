@@ -11,10 +11,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <main>
-        <Header />
-        <div>{children}</div>
-      </main>
+      <main className="min-w-screen min-h-screen bg-white">{children}</main>
     </>
   );
 };
