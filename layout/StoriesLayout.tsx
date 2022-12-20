@@ -32,7 +32,9 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
           ))}
         </ul>
       </nav>
-      <section>{children}</section>
+      <section>
+        <div>{children}</div>
+      </section>
     </>
   );
 };

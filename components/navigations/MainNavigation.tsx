@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./MainNavigation.module.css";
+import PrimaryButton from "../buttons/PrimaryButton";
 
 const MainNavigation = () => {
   return (
@@ -30,12 +31,7 @@ const MainNavigation = () => {
         </Link>
       </li>
       <li className="text-white">
-        <Link
-          href="/contact"
-          className={`${styles.after} px-5 py-3 relative before:absolute before:left-0 before:right-0 before:bottom-0 before:top-0 bg-riz-purple before:z-10 before:rounded-full`}
-        >
-          Contact
-        </Link>
+        <PrimaryButton>Contact</PrimaryButton>
       </li>
     </ul>
   );

@@ -36,16 +36,16 @@ const Slide1: NextPageWithLayout = () => {
     <div
       onMouseMove={imageClipMove}
       id="item1"
-      className="carousel-item w-screen h-screen flex justify-center items-center gap-12"
+      className="carousel-item w-screen h-screen flex justify-center items-center"
       style={{ left: xcors, top: ycors }}
     >
-      {/* <div id="bg" className="relative">
-        <Image
-          src={website}
-          alt="website"
-          className={`${styles.imageClip} left-60`}
-        />
-      </div> */}
+      <div id="bg">
+        <iframe
+          src="https://my.spline.design/componentuicopy-535ad79663ab2c3474f1a00e97677850/"
+          width={500}
+          height={500}
+        ></iframe>
+      </div>
       <p className="max-w-xs md:max-w-md">
         <span className={styles.letter}>{type}</span>
       </p>

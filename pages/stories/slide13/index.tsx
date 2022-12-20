@@ -3,7 +3,7 @@ import { NextPageWithLayout } from "../../_app";
 import MainLayout from "../../../layout/MainLayout";
 import HomeLayout from "../../../layout/StoriesLayout";
 import styles from "./Slide13.module.css";
-import MainNavigation from "../../../components/tabs/MainNavigation";
+import MainNavigation from "../../../components/navigations/MainNavigation";
 import { useState, useEffect } from "react";
 
 const Slide13: NextPageWithLayout = () => {
