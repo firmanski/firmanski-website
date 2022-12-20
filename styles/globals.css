@@ -11,3 +11,10 @@
 :root {
   --colors-riz-purple: "#471DE3";
 }
+
+html,
+body {
+  font-family: museo, serif;
+  font-weight: 300;
+  font-style: normal;
+}
