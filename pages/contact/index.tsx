@@ -3,16 +3,15 @@ import { NextPageWithLayout } from "../_app";
 import MainLayout from "../../layout/MainLayout";
 import GlobalLayout from "../../layout/GlobalLayout";
 
-const Blog: NextPageWithLayout = () => {
-  return <div>Blog</div>;
+const Contact: NextPageWithLayout = () => {
+  return <div>Contact</div>;
 };
 
-Blog.getLayout = (page: ReactElement) => {
+Contact.getLayout = (page: ReactElement) => {
   return (
     <MainLayout>
       <GlobalLayout>{page}</GlobalLayout>
     </MainLayout>
   );
 };
-
-export default Blog;
+export default Contact;
