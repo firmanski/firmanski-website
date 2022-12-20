@@ -18,7 +18,7 @@ const MY_SOCIALS = [
 
 const SocialLinks = () => {
   return (
-    <ul className="flex justify-center items-center rounded-full gap-9">
+    <ul className="flex justify-center items-center rounded-full gap-9 border p-7">
       {MY_SOCIALS.map((social, index) => (
         <li key={index}>
           <Link

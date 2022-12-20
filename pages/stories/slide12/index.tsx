@@ -9,8 +9,7 @@ const Slide12: NextPageWithLayout = () => {
   const [xcors, setXcors] = useState();
   const [ycors, setYcors] = useState();
   const [type, setType] = useState("");
-  const initialText = `So now, I’m serious with my journey here, and want to be a
-  software engineer.`;
+  const initialText = `I want to be a software engineer....`;
   const initialTextArr = initialText.split("");
 
   function loopThroughSplittedText() {
@@ -39,9 +38,9 @@ const Slide12: NextPageWithLayout = () => {
       className="carousel-item w-screen h-screen flex justify-center items-center gap-12"
       style={{ left: xcors, top: ycors }}
     >
-      <p className="max-w-xs md:max-w-md">
-        <span className={styles.letter}>{type}</span>
-      </p>
+      <h1 className="max-w-xs md:max-w-md text-2xl mb-7 font-riz-h leading-normal">
+        {type}
+      </h1>
     </div>
   );
 };

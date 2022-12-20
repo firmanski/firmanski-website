@@ -14,6 +14,10 @@ module.exports = {
         "riz-blue": "#27DBFE",
         "riz-yellow": "#FFF112",
       },
+      fontFamily: {
+        "riz-h": "cuisine",
+        "riz-body": "museo",
+      },
     },
   },
   plugins: [require("daisyui")],

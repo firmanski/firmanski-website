@@ -10,7 +10,7 @@ const Slide1: NextPageWithLayout = () => {
   const [ycors, setYcors] = useState();
   const [type, setType] = useState("");
   const initialText =
-    "It all started in 2020 when I need a portfolio website for my vector graphic works. I started learning HTML, and quickly after I got into CSS, at that point I was mind blown by it's power!";
+    "When I need a portfolio website for my vector graphic works. I started learning HTML, and quickly after I got into CSS, at that point I was mind blown by it's power!";
   const initialTextArr = initialText.split("");
 
   function loopThroughSplittedText() {
@@ -36,19 +36,17 @@ const Slide1: NextPageWithLayout = () => {
     <div
       onMouseMove={imageClipMove}
       id="item1"
-      className="carousel-item w-screen h-screen flex justify-center items-center"
+      className="carousel-item w-screen h-screen flex justify-center items-center gap-6"
       style={{ left: xcors, top: ycors }}
     >
-      <div id="bg">
-        <iframe
-          src="https://my.spline.design/componentuicopy-535ad79663ab2c3474f1a00e97677850/"
-          width={500}
-          height={500}
-        ></iframe>
+      <div className="w-fit">
+        <h1 className="text-4xl mb-7 font-riz-h leading-loose">
+          🏃‍♂️It all started in 2020
+        </h1>
+        <p className="max-w-xs md:max-w-md min-h-16  font-riz-body">
+          <span className={styles.letter}>{type}</span>
+        </p>
       </div>
-      <p className="max-w-xs md:max-w-md">
-        <span className={styles.letter}>{type}</span>
-      </p>
     </div>
   );
 };
